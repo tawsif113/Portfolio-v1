@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kazi Md. Tawsif Rahman — backend software engineer focused on Spring Boot, microservices, DDD, CQRS, scalable APIs, and workflow automation." />
+  <title>Kazi Md. Tawsif Rahman — Backend Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main class="page">
+    <aside class="toc" aria-label="Table of contents">
+      <p class="toc__brand">Kazi Md. Tawsif Rahman</p>
+      <span class="toc__role">Backend software engineer · Dhaka</span>
+      <nav>
+        <ul class="toc__list">
+          <li><a href="#index"><span class="num">00</span><span>Index</span></a></li>
+          <li><a href="#now"><span class="num">01</span><span>Now</span></a></li>
+          <li><a href="#systems"><span class="num">02</span><span>Systems</span></a></li>
+          <li><a href="#projects"><span class="num">03</span><span>Projects</span></a></li>
+          <li><a href="#stack"><span class="num">04</span><span>Stack</span></a></li>
+          <li><a href="#proof"><span class="num">05</span><span>Proof</span></a></li>
+          <li><a href="#reach"><span class="num">06</span><span>Reach</span></a></li>
+        </ul>
+      </nav>
+      <div class="toc__meta">
+        <span>Dhaka, Bangladesh</span>
+        <span>Spring Boot · PostgreSQL · Redis</span>
+        <span>BRAC IT Services Ltd.</span>
+      </div>
+    </aside>
+
+    <article class="main">
+      <section class="section" id="index">
+        <p class="section__num">00 · Index</p>
+        <h1 class="section__head section__head--lede">Backend systems, shipped cleanly.</h1>
+        <div class="section__body">
+          <p>
+            I’m <strong>Kazi Md. Tawsif Rahman</strong>, a backend software engineer building
+            Spring Boot APIs, microservices, DDD, CQRS, workflow automation, and data-heavy systems. My recent work has been
+            in CRM and ticketing platforms, where I’ve handled ownership rules, Kanban flows, SLA
+            tracking, and the parts of the stack that make a product usable at scale.
+          </p>
+          <p>
+            This page keeps the noise out. Read the section that matters, skip the rest, and reach
+            out if you need a backend that stays understandable after the first release.
+          </p>
+        </div>
+        <div class="metrics" aria-label="Highlights">
+          <div><span class="metrics__value" data-target="168">168</span><span class="metrics__label">CRM REST endpoints</span></div>
+          <div><span class="metrics__value" data-target="96">96</span><span class="metrics__label">Ticketing REST endpoints</span></div>
+          <div><span class="metrics__value" data-target="30">30</span><span class="metrics__label">CRM controllers</span></div>
+          <div><span class="metrics__value" data-target="1500" data-suffix="+">1500+</span><span class="metrics__label">Codeforces rating</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="now">
+        <p class="section__num">01 · Now</p>
+        <h2 class="section__head">Current role.</h2>
+        <div class="section__body prose-grid">
+          <div>
+            <p class="leadline">Software Engineer — BRAC IT Services Ltd. · Dhaka, Bangladesh</p>
+            <p class="muted">Dec 2024 — Present</p>
+          </div>
+          <div>
+            <p>
+              I work on backend systems for internal CRM and ticketing products. The job is a mix
+              of API design, workflow rules, database modeling, and making sure the routing logic
+              doesn’t become a maintenance problem the moment the product grows.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="systems">
+        <p class="section__num">02 · Systems</p>
+        <h2 class="section__head">What I built.</h2>
+        <p class="leadline">Two backend surfaces, built like products: one for revenue operations, one for support operations.</p>
+        <div class="metrics" aria-label="Systems highlights">
+          <div><span class="metrics__value" data-target="2">2</span><span class="metrics__label">Core systems</span></div>
+          <div><span class="metrics__value" data-target="264">264</span><span class="metrics__label">REST endpoints</span></div>
+          <div><span class="metrics__value" data-target="51">51</span><span class="metrics__label">Controllers</span></div>
+          <div><span class="metrics__value" data-target="1">1</span><span class="metrics__label">Modulith codebase</span></div>
+        </div>
+        <div class="proof-grid">
+          <div class="section__body">
+            <h3>CRM platform — sales engine and routing core</h3>
+            <ul class="mini-list">
+              <li>168 REST endpoints across 30 controllers for accounts, leads, opportunities, quotes, campaigns, territories, and pipeline boards.</li>
+              <li>Built the Kanban layer as a rule-driven workflow: fixed-length rank keys, state validation, idempotent moves, audit trails, and board metadata sync.</li>
+              <li>Used territory and assignment rules to route work with business logic instead of hard-coded branching, including schedule-day checks and duplicate assignee validation.</li>
+              <li>Kept the module boundaries clean with service interfaces, implementation classes, repositories, specifications, and MapStruct-backed DTO layers.</li>
+            </ul>
+          </div>
+          <div class="section__body">
+            <h3>Ticketing system — support operations and SLA control</h3>
+            <ul class="mini-list">
+              <li>96 REST endpoints across 21 controllers for ticket intake, comments, forwarding, notifications, teams, and metadata management.</li>
+              <li>Designed the workflow around triage and redistribution: least-loaded team routing, absence-reliever handling, workload updates, and ticket handoff flows.</li>
+              <li>Added operational depth with SLA/KPI tracking, flags, additional fields, activity logs, and cached workload/read models where speed mattered.</li>
+              <li>Split the logic into focused services for assignment, forwarding, feedback, workload, and metadata so the system stays readable as it grows.</li>
+            </ul>
+          </div>
+          <div class="section__body proof-wide">
+            <h3>Architecture notes</h3>
+            <ul class="mini-list">
+              <li>Spring Modulith, Spring Security, RabbitMQ, Redis, Quartz, PostgreSQL, and Flyway keep the platform modular but still deployable as one coherent backend.</li>
+              <li>The design leans on DDD boundaries where they help: service orchestration, rule evaluators, domain-specific repositories, and reusable helper services.</li>
+              <li>I deliberately optimized for maintainability: the code reads like a system with policies, not a pile of controllers.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <p class="section__num">03 · Projects</p>
+        <h2 class="section__head">NotifyFlow — Notification Latency Simulator.</h2>
+        <p class="leadline">Event-driven notification simulator for broadcast delivery, per-user fan-out, and live latency tracking.</p>
+        <div class="metrics" aria-label="Project metrics">
+          <div><span class="metrics__value" data-target="5">5</span><span class="metrics__label">Backend modules</span></div>
+          <div><span class="metrics__value" data-target="4">4</span><span class="metrics__label">REST endpoints</span></div>
+          <div><span class="metrics__value" data-target="2">2</span><span class="metrics__label">Persistence tables</span></div>
+          <div><span class="metrics__value" data-target="1">1</span><span class="metrics__label">Async fan-out flow</span></div>
+        </div>
+        <div class="proof-grid">
+          <div class="section__body">
+            <h3>System design</h3>
+            <ul class="mini-list">
+              <li>Hexagonal backend shape: request comes in through the API layer, orchestration stays in the application layer, and adapters handle persistence, RabbitMQ, and realtime push.</li>
+              <li>Broadcast flow: save notification → publish event → consume asynchronously → persist each delivery → push live updates to the client.</li>
+              <li>PostgreSQL stores the notification record and each delivery row so the system can report status, read state, and latency.</li>
+            </ul>
+          </div>
+          <div class="section__body proof-wide">
+            <h3>Object-oriented design</h3>
+            <ul class="mini-list">
+              <li>Domain models are immutable Java records: <code>Notification</code>, <code>NotificationDelivery</code>, and <code>NotificationEvent</code>.</li>
+              <li>The application service implements use-case interfaces for sending, consuming, querying, and updating read state.</li>
+              <li>Dependency inversion keeps infrastructure details outside the core logic, so the business rules stay easy to test and extend.</li>
+              <li>Fan-out is handled with <code>CompletableFuture</code> and an executor so per-user delivery work runs concurrently.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="stack">
+        <p class="section__num">04 · Stack</p>
+        <h2 class="section__head">Tools and technologies.</h2>
+        <div class="section__body">
+          <table class="stack-table" aria-label="Technical skills">
+            <tbody>
+              <tr>
+                <th>Languages</th>
+                <td>Java, SQL, C, C++</td>
+              </tr>
+              <tr>
+                <th>Backend frameworks</th>
+                <td>Spring Boot, Spring Security, Spring Data JPA, Hibernate, Bean Validation, Spring Modulith</td>
+              </tr>
+              <tr>
+                <th>API design</th>
+                <td>REST APIs, OpenAPI/Swagger, MapStruct, DTO design, request validation, error handling</td>
+              </tr>
+              <tr>
+                <th>Databases</th>
+                <td>PostgreSQL, Flyway migrations, Redis, JSONB, indexing, repository queries</td>
+              </tr>
+              <tr>
+                <th>Messaging and jobs</th>
+                <td>RabbitMQ, asynchronous processing, retry handling, Quartz scheduling</td>
+              </tr>
+              <tr>
+                <th>Architecture</th>
+                <td>Microservices, Domain-Driven Design (DDD), Command Query Responsibility Segregation (CQRS)</td>
+              </tr>
+              <tr>
+                <th>Testing and delivery</th>
+                <td>JUnit 5, Mockito, API testing, Gradle, Docker, Git, Linux</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="proof">
+        <p class="section__num">05 · Proof</p>
+        <h2 class="section__head">Credentials and output.</h2>
+        <div class="proof-grid">
+          <div class="section__body">
+            <h3>Achievements</h3>
+            <ul class="mini-list">
+              <li>Codeforces Specialist, 1500+ rating.</li>
+              <li>Finalist, CUET IUPC 2024.</li>
+              <li>Finalist, CUET IUPC 2023.</li>
+              <li>Finalist, CUET Tech Carnival 2020.</li>
+            </ul>
+          </div>
+          <div class="section__body">
+            <h3>Education</h3>
+            <p class="leadline">B.Sc. in Computer Science and Engineering</p>
+            <p>Chittagong University of Engineering and Technology (CUET) · Bangladesh</p>
+            <p class="muted">CGPA: 3.59 / 4.00 · Completed Sep 2024</p>
+          </div>
+          <div class="section__body proof-wide">
+            <h3>Publication</h3>
+            <p class="leadline">An Automated System for Detecting Property Insurance Fraud Using Machine Learning</p>
+            <p>International Journal of Mathematical Sciences and Computing (IJMSC)</p>
+            <p class="muted">Kazi Md. Tawsif Rahman, Chowdhury Mahfuzul Hoq · Published Sep 2024 · DOI 10.5815/ijmsc.2024.03.02</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reach">
+        <p class="section__num">06 · Reach</p>
+        <h2 class="section__head">The places to find me.</h2>
+        <div class="section__body contact-list">
+          <div class="contact-row"><span>Email</span><a href="mailto:tawsifcse113@gmail.com">tawsifcse113@gmail.com</a></div>
+          <div class="contact-row"><span>LinkedIn</span><a href="https://linkedin.com/in/tawsifrahman113" target="_blank" rel="noreferrer">linkedin.com/in/tawsifrahman113</a></div>
+          <div class="contact-row"><span>GitHub</span><a href="https://github.com/tawsif113" target="_blank" rel="noreferrer">github.com/tawsif113</a></div>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
