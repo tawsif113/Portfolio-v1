@@ -1,38 +1,53 @@
 :root {
-  --paper: #f4f1ea;
-  --paper-deep: #eae5da;
-  --surface: #fbfaf6;
-  --ink: #17221d;
-  --ink-soft: #58645e;
-  --ink-muted: #7b857f;
-  --line: rgba(23, 34, 29, 0.16);
-  --line-strong: rgba(23, 34, 29, 0.3);
-  --accent: #1e6757;
-  --accent-dark: #164c41;
-  --accent-soft: #d9e7df;
-  --white: #fffdf8;
+  --page: #f8fafc;
+  --surface: #ffffff;
+  --surface-soft: #f1f5f9;
+  --surface-blue: #eff6ff;
 
-  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "DM Mono", "SFMono-Regular", Consolas, monospace;
+  --ink: #0f172a;
+  --ink-soft: #334155;
+  --ink-muted: #64748b;
+  --ink-faint: #94a3b8;
 
-  --step--1: clamp(0.78rem, 0.75rem + 0.12vw, 0.85rem);
-  --step-0: clamp(0.98rem, 0.93rem + 0.2vw, 1.08rem);
-  --step-1: clamp(1.22rem, 1.08rem + 0.55vw, 1.5rem);
-  --step-2: clamp(1.65rem, 1.34rem + 1.15vw, 2.25rem);
-  --step-3: clamp(2.2rem, 1.66rem + 2vw, 3.4rem);
-  --step-4: clamp(3rem, 2rem + 3.65vw, 5.8rem);
+  --line: #e2e8f0;
+  --line-strong: #cbd5e1;
+
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --accent-deep: #1e3a8a;
+  --accent-soft: #dbeafe;
+
+  --navy: #0b1220;
+  --navy-soft: #111c31;
+  --white: #ffffff;
+  --success: #0f766e;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+  --step--1: clamp(0.76rem, 0.73rem + 0.1vw, 0.83rem);
+  --step-0: clamp(0.96rem, 0.92rem + 0.18vw, 1.05rem);
+  --step-1: clamp(1.12rem, 1.03rem + 0.34vw, 1.32rem);
+  --step-2: clamp(1.55rem, 1.34rem + 0.8vw, 2.05rem);
+  --step-3: clamp(2.1rem, 1.7rem + 1.55vw, 3.05rem);
+  --step-4: clamp(3rem, 2.2rem + 3vw, 5.15rem);
 
   --space-2xs: 0.4rem;
-  --space-xs: 0.75rem;
+  --space-xs: 0.7rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2.25rem;
   --space-xl: 3.5rem;
-  --space-2xl: 5.5rem;
-  --space-3xl: 8rem;
+  --space-2xl: 5.25rem;
+  --space-3xl: 7.5rem;
 
-  --radius-sm: 0.65rem;
-  --radius-md: 1.15rem;
-  --shell: 74rem;
+  --radius-sm: 0.6rem;
+  --radius-md: 0.95rem;
+  --radius-lg: 1.25rem;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 18px 45px rgba(15, 23, 42, 0.1);
+
+  --shell: 76rem;
   --ease: cubic-bezier(0.2, 0.75, 0.25, 1);
 }

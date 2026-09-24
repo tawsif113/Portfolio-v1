@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Kazi Md. Tawsif Rahman is a backend software engineer building reliable Java and Spring Boot systems for complex business workflows."
+    content="Kazi Md. Tawsif Rahman — backend software engineer specializing in Java, Spring Boot, distributed workflows, reliability, security, and data consistency."
   />
-  <meta name="theme-color" content="#f4f1ea" />
+  <meta name="theme-color" content="#0f172a" />
   <title>Kazi Md. Tawsif Rahman — Backend Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
   />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -31,13 +31,14 @@
       </a>
 
       <nav aria-label="Primary navigation">
-        <a href="#work">Work</a>
+        <a href="#case-study">Case study</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#capabilities">Capabilities</a>
+        <a href="#capabilities">Skills</a>
         <a href="#background">Background</a>
       </nav>
 
-      <a class="nav-contact" href="mailto:tawsifcse113@gmail.com">Let’s talk</a>
+      <a class="nav-contact" href="mailto:tawsifcse113@gmail.com">Contact</a>
     </div>
   </header>
 
@@ -46,198 +47,265 @@
       <div class="hero-copy">
         <p class="eyebrow">
           <span class="status-dot" aria-hidden="true"></span>
-          Software Engineer at BRAC IT Services
+          Software Engineer · BRAC IT Services Ltd.
         </p>
-        <h1>Backend systems built for real workflows—not just happy paths.</h1>
+        <h1>Backend engineering for systems that cannot afford ambiguous behavior.</h1>
         <p class="hero-intro">
-          I build Java and Spring Boot systems where business rules, data integrity,
-          asynchronous work, and long-term maintainability matter. My recent work spans
-          CRM, ticketing, and event-driven operational platforms.
+          I build Java and Spring Boot systems around explicit business rules, transactional
+          correctness, safe retries, concurrency control, authorization, reliable messaging,
+          and observable failure handling.
         </p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#work">Explore selected work</a>
-          <a class="text-link" href="mailto:tawsifcse113@gmail.com">
-            tawsifcse113@gmail.com
-            <span aria-hidden="true">↗</span>
+          <a class="button button-primary" href="#case-study">View flagship case study</a>
+          <a class="button button-secondary" href="https://github.com/tawsif113" target="_blank" rel="noreferrer">
+            GitHub profile ↗
           </a>
         </div>
       </div>
 
-      <aside class="hero-note" aria-label="Professional summary">
-        <p class="note-label">What I bring</p>
-        <p class="note-statement">
-          Product-minded backend engineering with a bias for explicit rules,
-          traceable workflows, and systems that remain understandable as they grow.
+      <aside class="hero-panel" aria-label="Professional summary">
+        <p class="panel-label">Engineering profile</p>
+        <h2>Production-minded backend work, backed by evidence.</h2>
+        <p>
+          My strongest work is in workflow-heavy systems where correctness must survive
+          retries, races, infrastructure failures, and changing business rules.
         </p>
         <dl class="quick-facts">
           <div>
-            <dt>Based in</dt>
-            <dd>Dhaka, Bangladesh</dd>
+            <dt>Primary stack</dt>
+            <dd>Java 25 · Spring Boot 4</dd>
           </div>
           <div>
-            <dt>Core stack</dt>
-            <dd>Java · Spring Boot · PostgreSQL</dd>
+            <dt>Data & messaging</dt>
+            <dd>PostgreSQL · Redis · RabbitMQ · MongoDB</dd>
           </div>
           <div>
-            <dt>Focus</dt>
-            <dd>Workflow, messaging, data consistency</dd>
+            <dt>Architecture</dt>
+            <dd>DDD · CQRS · Saga · Transactional Outbox</dd>
+          </div>
+          <div>
+            <dt>Engineering focus</dt>
+            <dd>Reliability · Security · Concurrency · Observability</dd>
           </div>
         </dl>
       </aside>
     </section>
 
-    <section class="section shell" id="work">
-      <div class="section-heading">
-        <p class="section-kicker">Selected professional work</p>
-        <h2>Systems with rules, state, and operational consequences.</h2>
+    <section class="case-section" id="case-study">
+      <div class="shell">
+        <div class="case-hero">
+          <div>
+            <p class="section-kicker section-kicker-light">Flagship engineering case study</p>
+            <h2>Spring Boot Rescue Lab</h2>
+            <p class="case-lead">
+              A deliberately fragile order API repaired one production-style incident at a time.
+              Instead of presenting a clean CRUD demo, the repository preserves the failure,
+              root cause, trade-offs, remediation, regression test, and evidence for each incident.
+            </p>
+          </div>
+          <div class="case-links">
+            <a class="button button-light" href="https://github.com/tawsif113/spring-boot-rescue-lab" target="_blank" rel="noreferrer">
+              Open repository ↗
+            </a>
+            <a class="case-text-link" href="https://github.com/tawsif113/spring-boot-rescue-lab/blob/main/docs/PORTFOLIO-CASE-STUDY.md" target="_blank" rel="noreferrer">
+              Read portfolio case study
+            </a>
+          </div>
+        </div>
+
+        <div class="metric-strip" aria-label="Spring Boot Rescue Lab evidence highlights">
+          <div>
+            <strong>42 → 3</strong>
+            <span>SQL statements</span>
+          </div>
+          <div>
+            <strong>8 → 1</strong>
+            <span>concurrent retry outcome</span>
+          </div>
+          <div>
+            <strong>2 → 1</strong>
+            <span>buyers accepted for last unit</span>
+          </div>
+          <div>
+            <strong>401 / 403 / 404 / 200</strong>
+            <span>authorization matrix</span>
+          </div>
+          <div>
+            <strong>At-least-once</strong>
+            <span>reliable event delivery model</span>
+          </div>
+        </div>
+
+        <div class="incident-grid">
+          <article class="incident-card">
+            <div class="incident-number">INC-001</div>
+            <p class="incident-type">SQL performance</p>
+            <h3>N+1 order search</h3>
+            <p>
+              A 20-order page generated 42 prepared statements because DTO mapping traversed
+              lazy order items and products after pagination.
+            </p>
+            <dl class="incident-detail">
+              <div><dt>Fix</dt><dd>Pagination-safe ID page + graph fetch + composite PostgreSQL index.</dd></div>
+              <div><dt>Evidence</dt><dd>Exactly 3 statements for every non-empty page; 92.86% fewer in the 20-order test.</dd></div>
+            </dl>
+            <a href="https://github.com/tawsif113/spring-boot-rescue-lab/blob/main/incidents/INC-001-slow-order-search.md" target="_blank" rel="noreferrer">Read incident report ↗</a>
+          </article>
+
+          <article class="incident-card">
+            <div class="incident-number">INC-002</div>
+            <p class="incident-type">Idempotency</p>
+            <h3>Duplicate orders after retries</h3>
+            <p>
+              A timed-out client could retry a successful request and create a second order
+              because the API had no durable command identity.
+            </p>
+            <dl class="incident-detail">
+              <div><dt>Fix</dt><dd>Customer-scoped idempotency key, SHA-256 fingerprint, advisory lock, durable replay record.</dd></div>
+              <div><dt>Evidence</dt><dd>8 concurrent retries → 1 order, 1 stock reservation, 7 replayed responses.</dd></div>
+            </dl>
+            <a href="https://github.com/tawsif113/spring-boot-rescue-lab/blob/main/incidents/INC-002-duplicate-orders.md" target="_blank" rel="noreferrer">Read incident report ↗</a>
+          </article>
+
+          <article class="incident-card">
+            <div class="incident-number">INC-003</div>
+            <p class="incident-type">Concurrency control</p>
+            <h3>Inventory overselling</h3>
+            <p>
+              Two buyers read the same final unit and both succeeded through a classic lost-update
+              race, even though the final stock value still looked valid.
+            </p>
+            <dl class="incident-detail">
+              <div><dt>Fix</dt><dd>Atomic conditional stock update inside the order transaction.</dd></div>
+              <div><dt>Evidence</dt><dd>2 buyers / 1 unit → exactly 1 success and 1 insufficient-stock rejection.</dd></div>
+            </dl>
+            <a href="https://github.com/tawsif113/spring-boot-rescue-lab/blob/main/incidents/INC-003-inventory-race.md" target="_blank" rel="noreferrer">Read incident report ↗</a>
+          </article>
+
+          <article class="incident-card">
+            <div class="incident-number">INC-004</div>
+            <p class="incident-type">Application security</p>
+            <h3>Broken object authorization</h3>
+            <p>
+              The baseline trusted a caller-controlled customer header and allowed arbitrary
+              order access, administrative actions, and operational endpoints.
+            </p>
+            <dl class="incident-detail">
+              <div><dt>Fix</dt><dd>Principal-derived identity, ownership-scoped queries, explicit role boundaries, deny-by-default security.</dd></div>
+              <div><dt>Evidence</dt><dd>Real Spring Security integration matrix covering anonymous, customer, cross-customer, and admin paths.</dd></div>
+            </dl>
+            <a href="https://github.com/tawsif113/spring-boot-rescue-lab/blob/main/incidents/INC-004-broken-authorization.md" target="_blank" rel="noreferrer">Read incident report ↗</a>
+          </article>
+
+          <article class="incident-card incident-card-wide">
+            <div class="incident-number">INC-005</div>
+            <p class="incident-type">Messaging reliability</p>
+            <h3>Lost events across PostgreSQL and RabbitMQ</h3>
+            <p>
+              A database commit and broker publish are separate side effects. A crash between them
+              could leave a durable order with no integration event for downstream systems.
+            </p>
+            <dl class="incident-detail">
+              <div><dt>Fix</dt><dd>Transactional outbox, publisher confirms, retries with backoff, DLQ, and consumer deduplication.</dd></div>
+              <div><dt>Guarantee</dt><dd>Committed orders retain durable event intent; duplicate delivery is expected and harmless under an explicit at-least-once model.</dd></div>
+            </dl>
+            <a href="https://github.com/tawsif113/spring-boot-rescue-lab/blob/main/incidents/INC-005-lost-events.md" target="_blank" rel="noreferrer">Read incident report ↗</a>
+          </article>
+        </div>
+
+        <div class="evidence-bar">
+          <p>
+            <strong>How the lab proves the work:</strong> deterministic reproduction · root-cause analysis ·
+            alternatives considered · Flyway migrations · PostgreSQL Testcontainers · JUnit 5 · CI evidence artifacts ·
+            failure injection · correlation IDs · ECS JSON logs · Actuator · Prometheus · Grafana
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="experience">
+      <div class="section-heading section-heading-row">
+        <div>
+          <p class="section-kicker">Professional experience</p>
+          <h2>Backend systems with real operational workflows.</h2>
+        </div>
         <p>
-          The strongest work is rarely one clever endpoint. It is the collection of
-          decisions that keeps an evolving product coherent.
+          My production work centers on translating changing business rules into clear service boundaries,
+          traceable state changes, and reliable operational behavior.
         </p>
       </div>
 
-      <article class="case-study">
-        <div class="case-index">
-          <span>01</span>
-          <span>CRM platform</span>
-        </div>
-        <div class="case-content">
-          <p class="case-context">BRAC IT Services · Backend engineering</p>
-          <h3>Turning sales operations into a rule-driven platform.</h3>
-          <p class="case-summary">
-            Built backend capabilities for accounts, contacts, leads, opportunities,
-            quotes, campaigns, territories, products, and configurable pipeline boards.
-            The work centered on converting evolving business policies into maintainable
-            application behavior.
+      <div class="work-grid">
+        <article class="work-card">
+          <p class="work-meta">BRAC IT Services · CRM platform</p>
+          <h3>Rule-driven sales operations</h3>
+          <p>
+            Built backend capabilities across accounts, contacts, leads, opportunities, quotes,
+            campaigns, territories, products, and configurable pipeline boards.
           </p>
-          <div class="case-details">
-            <div>
-              <h4>Key engineering decisions</h4>
-              <ul>
-                <li>Modeled Kanban moves with transition validation, idempotency, rank ordering, and audit history.</li>
-                <li>Implemented territory and assignment rules with schedule checks and duplicate-assignee protection.</li>
-                <li>Kept API, service, mapping, persistence, and rule-evaluation responsibilities clearly separated.</li>
-              </ul>
-            </div>
-            <dl class="case-metrics" aria-label="CRM platform scope">
-              <div>
-                <dt>168</dt>
-                <dd>REST endpoints</dd>
-              </div>
-              <div>
-                <dt>30</dt>
-                <dd>controllers</dd>
-              </div>
-              <div>
-                <dt>Modular</dt>
-                <dd>Spring architecture</dd>
-              </div>
-            </dl>
-          </div>
+          <ul>
+            <li>Kanban transitions with validation, idempotency, rank ordering, and audit history.</li>
+            <li>Territory and assignment rules with schedule checks and duplicate-assignee protection.</li>
+            <li>Separated API, service, mapping, persistence, and rule-evaluation responsibilities.</li>
+          </ul>
           <p class="tech-line">Spring Boot · PostgreSQL · Flyway · Redis · RabbitMQ · OpenAPI</p>
-        </div>
-      </article>
+        </article>
 
-      <article class="case-study">
-        <div class="case-index">
-          <span>02</span>
-          <span>Ticketing system</span>
-        </div>
-        <div class="case-content">
-          <p class="case-context">BRAC IT Services · Backend engineering</p>
-          <h3>Making support operations measurable and assignable.</h3>
-          <p class="case-summary">
-            Developed a ticketing backend covering intake, triage, comments, forwarding,
-            team operations, notifications, metadata, and service-performance tracking.
-            The system needed to route work fairly while preserving a clear operational history.
+        <article class="work-card">
+          <p class="work-meta">BRAC IT Services · Ticketing platform</p>
+          <h3>Support operations, routing, and SLA visibility</h3>
+          <p>
+            Developed backend flows for intake, triage, comments, forwarding, team operations,
+            notifications, metadata, and service-performance tracking.
           </p>
-          <div class="case-details">
-            <div>
-              <h4>Key engineering decisions</h4>
-              <ul>
-                <li>Designed least-loaded team routing, absence-reliever behavior, and workload updates.</li>
-                <li>Implemented SLA and KPI tracking alongside activity logs, flags, and configurable fields.</li>
-                <li>Split assignment, forwarding, feedback, workload, and metadata into focused services.</li>
-              </ul>
-            </div>
-            <dl class="case-metrics" aria-label="Ticketing platform scope">
-              <div>
-                <dt>96</dt>
-                <dd>REST endpoints</dd>
-              </div>
-              <div>
-                <dt>21</dt>
-                <dd>controllers</dd>
-              </div>
-              <div>
-                <dt>SLA</dt>
-                <dd>and KPI tracking</dd>
-              </div>
-            </dl>
-          </div>
-          <p class="tech-line">Spring Boot · PostgreSQL · Redis · Quartz · RabbitMQ · JPA</p>
-        </div>
-      </article>
+          <ul>
+            <li>Least-loaded team routing, absence-reliever behavior, and workload updates.</li>
+            <li>SLA/KPI tracking alongside activity logs, flags, comments, and configurable fields.</li>
+            <li>Focused services for assignment, forwarding, feedback, workload, and metadata.</li>
+          </ul>
+          <p class="tech-line">Spring Boot · PostgreSQL · Redis · RabbitMQ · Quartz · JPA/Hibernate</p>
+        </article>
+      </div>
     </section>
 
-    <section class="section section-tint" id="projects">
+    <section class="section section-soft" id="projects">
       <div class="shell">
         <div class="section-heading section-heading-row">
           <div>
-            <p class="section-kicker">Independent builds</p>
-            <h2>Small systems for studying hard backend problems.</h2>
+            <p class="section-kicker">Selected systems</p>
+            <h2>Focused builds for distributed backend problems.</h2>
           </div>
           <p>
-            I use focused projects to make architecture decisions visible, testable,
-            and easier to discuss than production work can be.
+            I use independent projects to make architecture choices inspectable and to explore
+            failure modes that are difficult to demonstrate safely in production systems.
           </p>
         </div>
 
-        <div class="project-list">
-          <article class="project">
-            <div class="project-topline">
-              <span>Event-driven delivery</span>
-              <a
-                href="https://github.com/tawsif113/NotifyFlow-Notification-Latency-Simulator"
-                target="_blank"
-                rel="noreferrer"
-              >GitHub ↗</a>
-            </div>
-            <h3>NotifyFlow</h3>
-            <p>
-              A notification latency simulator that persists delivery records, fans out
-              broadcasts through RabbitMQ, and streams per-user status and latency updates
-              over WebSocket/STOMP.
-            </p>
-            <ul class="project-points">
-              <li>Hexagonal, multi-module backend</li>
-              <li>Async fan-out with durable delivery state</li>
-              <li>Live latency and coverage visibility</li>
-            </ul>
-            <p class="tech-line">Java 25 · Spring Boot · RabbitMQ · PostgreSQL · WebSocket</p>
-          </article>
-
-          <article class="project">
-            <div class="project-topline">
-              <span>Distributed transactions</span>
-              <a
-                href="https://github.com/tawsif113/spring-saga-orchestrator"
-                target="_blank"
-                rel="noreferrer"
-              >GitHub ↗</a>
-            </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <p class="project-label">Distributed transactions</p>
             <h3>Spring Saga Orchestrator</h3>
             <p>
-              An event-driven order workflow across order, inventory, and payment services,
-              with autonomous data ownership, explicit failure events, and inventory
-              compensation when payment fails.
+              Event-driven order coordination across order, inventory, and payment services with
+              autonomous data ownership, idempotent consumers, explicit failure events, and compensation.
             </p>
-            <ul class="project-points">
-              <li>Idempotent event consumers</li>
-              <li>Outbox-style event publishing</li>
-              <li>Traceable saga state and compensation</li>
-            </ul>
-            <p class="tech-line">Java 25 · Spring Boot 4 · RabbitMQ · MongoDB · Docker</p>
+            <div class="tag-row">
+              <span>Java 25</span><span>Spring Boot 4</span><span>RabbitMQ</span><span>MongoDB</span>
+            </div>
+            <a href="https://github.com/tawsif113/spring-saga-orchestrator" target="_blank" rel="noreferrer">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <p class="project-label">Event-driven delivery</p>
+            <h3>NotifyFlow</h3>
+            <p>
+              Notification delivery and latency simulation with durable delivery records,
+              asynchronous fan-out through RabbitMQ, and live per-user status updates over WebSocket/STOMP.
+            </p>
+            <div class="tag-row">
+              <span>Java</span><span>Spring Boot</span><span>RabbitMQ</span><span>PostgreSQL</span>
+            </div>
+            <a href="https://github.com/tawsif113/NotifyFlow-Notification-Latency-Simulator" target="_blank" rel="noreferrer">View repository ↗</a>
           </article>
         </div>
       </div>
@@ -247,48 +315,48 @@
       <div class="section-heading section-heading-row">
         <div>
           <p class="section-kicker">Capabilities</p>
-          <h2>How I approach backend work.</h2>
+          <h2>What I optimize for.</h2>
         </div>
         <p>
-          Frameworks change. The useful part is knowing how to translate a messy domain
-          into explicit, observable, and testable behavior.
+          Framework knowledge matters, but the harder part is designing behavior that stays correct
+          when requests repeat, transactions overlap, dependencies fail, and systems evolve.
         </p>
       </div>
 
       <div class="principles">
         <article>
           <span>01</span>
-          <h3>Model the workflow</h3>
-          <p>Make states, transitions, permissions, failure paths, and invariants visible before the code spreads them everywhere.</p>
+          <h3>Correctness before scale</h3>
+          <p>Define invariants, transactional boundaries, ownership, and failure semantics before optimizing throughput.</p>
         </article>
         <article>
           <span>02</span>
-          <h3>Protect consistency</h3>
-          <p>Use transactions, idempotency, validation, audit records, and carefully owned data to keep changes explainable.</p>
+          <h3>Evidence before optimization</h3>
+          <p>Reproduce the failure, measure it, compare alternatives, and keep regression evidence close to the code.</p>
         </article>
         <article>
           <span>03</span>
-          <h3>Design for operations</h3>
-          <p>Treat retries, queues, schedules, logs, metrics, and failure recovery as part of the product—not afterthoughts.</p>
+          <h3>Operations are part of design</h3>
+          <p>Retries, queues, backlogs, logs, metrics, health checks, and recovery paths are product behavior.</p>
         </article>
       </div>
 
-      <div class="stack">
+      <div class="stack-grid">
         <div>
           <h3>Backend</h3>
-          <p>Java · Spring Boot · Spring Security · Spring Data JPA · Hibernate · Spring Modulith</p>
+          <p>Java 25 · Spring Boot 4 · Spring Security · Spring Data JPA · Hibernate · REST · OpenAPI</p>
         </div>
         <div>
-          <h3>Data</h3>
-          <p>PostgreSQL · MongoDB · Redis · Flyway · JSONB · indexing · query design</p>
+          <h3>Architecture</h3>
+          <p>DDD · CQRS · Saga · modular monoliths · microservices · transactional outbox · idempotency</p>
         </div>
         <div>
-          <h3>Messaging & jobs</h3>
-          <p>RabbitMQ · asynchronous processing · retry handling · Quartz · WebSocket/STOMP</p>
+          <h3>Data & messaging</h3>
+          <p>PostgreSQL · MongoDB · Redis · RabbitMQ · Kafka · Flyway · indexing · query design</p>
         </div>
         <div>
-          <h3>Engineering</h3>
-          <p>REST · OpenAPI · DDD · CQRS · MapStruct · JUnit 5 · Mockito · Docker · Git · Linux</p>
+          <h3>Quality & operations</h3>
+          <p>JUnit 5 · Mockito · Testcontainers · Docker · GitHub Actions · Actuator · Prometheus · Grafana · Linux</p>
         </div>
       </div>
     </section>
@@ -299,10 +367,7 @@
           <p class="section-kicker">Background</p>
           <h2>Engineering foundation.</h2>
         </div>
-        <p>
-          A computer-science education, competitive-programming discipline, and
-          hands-on ownership of backend products.
-        </p>
+        <p>Computer-science training, production backend ownership, and research discipline.</p>
       </div>
 
       <div class="timeline">
@@ -311,11 +376,11 @@
           <div>
             <h3>Software Engineer</h3>
             <p>BRAC IT Services Ltd. · Dhaka, Bangladesh</p>
-            <p class="muted">Backend systems for CRM and ticketing products.</p>
+            <p class="muted">Backend engineering for CRM, ticketing, workflow, and messaging-heavy systems.</p>
           </div>
         </article>
         <article>
-          <p class="timeline-date">Sep 2024</p>
+          <p class="timeline-date">2024</p>
           <div>
             <h3>B.Sc. in Computer Science & Engineering</h3>
             <p>Chittagong University of Engineering and Technology (CUET)</p>
@@ -325,21 +390,9 @@
         <article>
           <p class="timeline-date">2024</p>
           <div>
-            <h3>Published research</h3>
-            <p>An Automated System for Detecting Property Insurance Fraud Using Machine Learning</p>
-            <a
-              class="inline-link"
-              href="https://doi.org/10.5815/ijmsc.2024.03.02"
-              target="_blank"
-              rel="noreferrer"
-            >View publication ↗</a>
-          </div>
-        </article>
-        <article>
-          <p class="timeline-date">Competitive programming</p>
-          <div>
-            <h3>Codeforces Specialist</h3>
-            <p>1500+ rating · Finalist at CUET IUPC 2023 and 2024.</p>
+            <h3>Peer-reviewed publications</h3>
+            <p>Machine-learning fraud detection and an IEEE-published insurance-awareness application.</p>
+            <a class="inline-link" href="https://research.tawsifrahman.flaro-tech.com" target="_blank" rel="noreferrer">Academic portfolio ↗</a>
           </div>
         </article>
       </div>
@@ -348,15 +401,18 @@
     <section class="contact-section">
       <div class="shell contact-inner">
         <div>
-          <p class="section-kicker">Contact</p>
-          <h2>Let’s build something that stays maintainable.</h2>
+          <p class="section-kicker section-kicker-light">Contact</p>
+          <h2>Looking for a backend engineer who can reason about failure?</h2>
         </div>
         <div class="contact-copy">
           <p>
-            I’m interested in backend engineering roles and conversations about
-            workflow-heavy, event-driven, and data-intensive systems.
+            I am interested in Java/Spring backend roles involving distributed workflows,
+            reliability, data consistency, security, and production-scale systems.
           </p>
-          <a class="button button-light" href="mailto:tawsifcse113@gmail.com">Send me an email</a>
+          <div class="contact-actions">
+            <a class="button button-light" href="mailto:tawsifcse113@gmail.com">tawsifcse113@gmail.com</a>
+            <a class="case-text-link" href="https://linkedin.com/in/tawsifrahman113" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          </div>
         </div>
       </div>
     </section>
@@ -367,7 +423,7 @@
       <p>© 2026 Kazi Md. Tawsif Rahman</p>
       <div>
         <a href="https://github.com/tawsif113" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/tawsifrahman113" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://research.tawsifrahman.flaro-tech.com" target="_blank" rel="noreferrer">Academic portfolio</a>
         <a href="#top">Back to top ↑</a>
       </div>
     </div>
