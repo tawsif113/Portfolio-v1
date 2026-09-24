@@ -436,7 +436,7 @@ h2 {
 
 .metric-strip {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   margin-top: var(--space-2xl);
   border: 1px solid rgba(148, 163, 184, 0.24);
   border-radius: var(--radius-md);
