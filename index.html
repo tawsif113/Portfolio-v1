@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Kazi Md. Tawsif Rahman — backend software engineer specializing in Java, Spring Boot, distributed workflows, reliability, security, and data consistency."
+    content="Kazi Md. Tawsif Rahman — backend software engineer specializing in Java, Spring Boot, distributed workflows, reliability, security, caching, and data consistency."
   />
   <meta name="theme-color" content="#0f172a" />
   <title>Kazi Md. Tawsif Rahman — Backend Software Engineer</title>
@@ -135,6 +135,10 @@
             <strong>At-least-once</strong>
             <span>reliable event delivery model</span>
           </div>
+          <div>
+            <strong>24 → 1</strong>
+            <span>cold-cache PostgreSQL loads</span>
+          </div>
         </div>
 
         <div class="incident-grid">
@@ -198,7 +202,7 @@
             <a href="https://github.com/tawsif113/spring-boot-rescue-lab/blob/main/incidents/INC-004-broken-authorization.md" target="_blank" rel="noreferrer">Read incident report ↗</a>
           </article>
 
-          <article class="incident-card incident-card-wide">
+          <article class="incident-card">
             <div class="incident-number">INC-005</div>
             <p class="incident-type">Messaging reliability</p>
             <h3>Lost events across PostgreSQL and RabbitMQ</h3>
@@ -212,12 +216,27 @@
             </dl>
             <a href="https://github.com/tawsif113/spring-boot-rescue-lab/blob/main/incidents/INC-005-lost-events.md" target="_blank" rel="noreferrer">Read incident report ↗</a>
           </article>
+
+          <article class="incident-card">
+            <div class="incident-number">INC-006</div>
+            <p class="incident-type">Cache resilience</p>
+            <h3>Hot product cache stampede</h3>
+            <p>
+              A naive Redis cache still allowed every request to hit PostgreSQL when a popular key
+              expired, multiplying database work during the exact burst the cache was meant to absorb.
+            </p>
+            <dl class="incident-detail">
+              <div><dt>Fix</dt><dd>Redis distributed single-flight lock, double-checking, TTL jitter, bounded waiting, and after-commit invalidation.</dd></div>
+              <div><dt>Evidence</dt><dd>24 simultaneous cold reads → exactly 1 PostgreSQL load; Redis outage fails open to the database.</dd></div>
+            </dl>
+            <a href="https://github.com/tawsif113/spring-boot-rescue-lab/blob/main/incidents/INC-006-cache-stampede.md" target="_blank" rel="noreferrer">Read incident report ↗</a>
+          </article>
         </div>
 
         <div class="evidence-bar">
           <p>
             <strong>How the lab proves the work:</strong> deterministic reproduction · root-cause analysis ·
-            alternatives considered · Flyway migrations · PostgreSQL Testcontainers · JUnit 5 · CI evidence artifacts ·
+            alternatives considered · Flyway migrations · PostgreSQL + Redis Testcontainers · JUnit 5 · CI evidence artifacts ·
             failure injection · correlation IDs · ECS JSON logs · Actuator · Prometheus · Grafana
           </p>
         </div>
