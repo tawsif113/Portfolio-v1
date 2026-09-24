@@ -471,17 +471,73 @@ h2 {
 .incident-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
+  gap: 1.15rem;
   margin-top: var(--space-xl);
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  background: rgba(148, 163, 184, 0.22);
 }
 
 .incident-card {
-  padding: var(--space-lg);
-  background: var(--navy-soft);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: clamp(1.5rem, 2.5vw, 2.15rem);
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 1rem;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.035), transparent 58%),
+    var(--navy-soft);
+  box-shadow:
+    0 18px 50px rgba(2, 6, 23, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+  transition:
+    transform 220ms var(--ease),
+    border-color 220ms var(--ease),
+    box-shadow 220ms var(--ease),
+    background 220ms var(--ease);
+}
+
+.incident-card::before {
+  position: absolute;
+  top: 0;
+  right: 1.25rem;
+  left: 1.25rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #60a5fa, rgba(96, 165, 250, 0.08));
+  content: "";
+  opacity: 0.8;
+}
+
+.incident-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(96, 165, 250, 0.48);
+  background:
+    linear-gradient(145deg, rgba(96, 165, 250, 0.075), transparent 58%),
+    var(--navy-soft);
+  box-shadow:
+    0 26px 70px rgba(2, 6, 23, 0.28),
+    0 0 0 1px rgba(96, 165, 250, 0.05);
+}
+
+.incident-grid.reveal-ready .incident-card {
+  opacity: 0;
+  transform: translateY(28px) scale(0.985);
+  transition:
+    opacity 620ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    transform 620ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    border-color 220ms var(--ease),
+    box-shadow 220ms var(--ease),
+    background 220ms var(--ease);
+}
+
+.incident-grid.reveal-ready .incident-card.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.incident-grid.reveal-ready .incident-card.is-visible:hover {
+  transform: translateY(-6px) scale(1);
 }
 
 .incident-card-wide {
@@ -489,12 +545,18 @@ h2 {
 }
 
 .incident-number {
-  color: #93c5fd;
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid rgba(96, 165, 250, 0.24);
+  border-radius: 0.45rem;
+  background: rgba(37, 99, 235, 0.1);
+  color: #bfdbfe;
   font-weight: 600;
 }
 
 .incident-type {
-  margin-top: 0.45rem;
+  margin-top: 0.8rem;
   color: #64748b;
   text-transform: uppercase;
 }
@@ -523,8 +585,8 @@ h2 {
   display: grid;
   grid-template-columns: 5rem 1fr;
   gap: var(--space-sm);
-  padding-top: 0.75rem;
-  border-top: 1px solid rgba(148, 163, 184, 0.18);
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
 }
 
 .incident-detail dt {
@@ -540,14 +602,22 @@ h2 {
 }
 
 .incident-card > a {
-  display: inline-block;
-  margin-top: var(--space-lg);
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: auto;
+  padding-top: var(--space-lg);
   color: #bfdbfe;
   font-size: 0.8rem;
   font-weight: 650;
+  transition: color 160ms var(--ease), transform 160ms var(--ease);
 }
 
-.incident-card > a:hover,
+.incident-card > a:hover {
+  color: var(--white);
+  transform: translateX(3px);
+}
+
 .case-text-link:hover {
   color: var(--white);
 }
@@ -928,5 +998,10 @@ h2 {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .incident-grid.reveal-ready .incident-card {
+    opacity: 1;
+    transform: none;
   }
 }
