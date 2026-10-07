@@ -8,7 +8,7 @@
     content="Kazi Md. Tawsif Rahman — backend software engineer specializing in Java, Spring Boot, distributed workflows, reliability, security, caching, and data consistency."
   />
   <meta name="theme-color" content="#0f172a" />
-  <title>Kazi Md. Tawsif Rahman — Backend Software Engineer</title>
+  <title>Kazi Md. Tawsif Rahman — Java Backend Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -27,7 +27,7 @@
         <span class="brand-mark" aria-hidden="true">TR</span>
         <span class="brand-copy">
           <strong>Kazi Md. Tawsif Rahman</strong>
-          <span>Backend Software Engineer</span>
+          <span>Java Backend Engineer</span>
         </span>
       </a>
 
@@ -52,12 +52,13 @@
         </p>
         <h1>Backend engineering for systems that cannot afford ambiguous behavior.</h1>
         <p class="hero-intro">
-          I build Java and Spring Boot systems around explicit business rules, transactional
-          correctness, safe retries, concurrency control, authorization, reliable messaging,
-          and observable failure handling.
+          I build CRM, ticketing, and lending services with Java and Spring Boot. My work focuses
+          on configurable business rules, workflow automation, data consistency, and reliable
+          messaging, with independent labs exploring concurrency, security, and failure handling.
         </p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#case-study">View flagship case study</a>
+          <a class="button button-primary" href="assets/Tawsif_Rahman_Java_Backend_Resume.pdf" download="Tawsif_Rahman_Java_Backend_Resume.pdf">Download résumé (PDF)</a>
+          <a class="button button-secondary" href="#case-study">View case study</a>
           <a class="button button-secondary" href="https://github.com/tawsif113" target="_blank" rel="noreferrer">
             GitHub profile ↗
           </a>
@@ -161,7 +162,7 @@
             </p>
             <dl class="incident-detail">
               <div><dt>Fix</dt><dd>Pagination-safe ID page + graph fetch + composite PostgreSQL index.</dd></div>
-              <div><dt>Evidence</dt><dd>Exactly 3 statements for every non-empty page; 92.86% fewer in the 20-order test.</dd></div>
+              <div><dt>Evidence</dt><dd>42 → 3 statements in the controlled 20-order test; 92.86% fewer SQL statements.</dd></div>
             </dl>
             <a href="https://github.com/tawsif113/spring-boot-rescue-lab/blob/main/incidents/INC-001-slow-order-search.md" target="_blank" rel="noreferrer">Read incident report ↗</a>
           </article>
@@ -244,7 +245,7 @@
 
         <div class="evidence-bar">
           <p>
-            <strong>How the lab proves the work:</strong> deterministic reproduction · root-cause analysis ·
+            <strong>Controlled lab evidence, not production traffic:</strong> deterministic reproduction · root-cause analysis ·
             alternatives considered · Flyway migrations · PostgreSQL + Redis Testcontainers · JUnit 5 · CI evidence artifacts ·
             failure injection · correlation IDs · ECS JSON logs · Actuator · Prometheus · Grafana
           </p>
@@ -259,8 +260,8 @@
           <h2>Backend systems with real operational workflows.</h2>
         </div>
         <p>
-          My production work centers on translating changing business rules into clear service boundaries,
-          traceable state changes, and reliable operational behavior.
+          Software Engineer at BRAC IT Services Ltd. · December 2024–present · Dhaka, Bangladesh.
+          Building business workflows across CRM, ticketing, and loan proposal services.
         </p>
       </div>
 
@@ -268,14 +269,10 @@
         <article class="work-card">
           <p class="work-meta">BRAC IT Services · CRM platform</p>
           <h3>Rule-driven sales operations</h3>
-          <p>
-            Built backend capabilities across accounts, contacts, leads, opportunities, quotes,
-            campaigns, territories, products, and configurable pipeline boards.
-          </p>
+          <p>Developed Spring Boot services for lead-to-quote workflows and sales pipelines; implemented configurable ownership assignment based on priority, schedules, conditions, and rotation rules.</p>
           <ul>
-            <li>Kanban transitions with validation, idempotency, rank ordering, and audit history.</li>
-            <li>Territory and assignment rules with schedule checks and duplicate-assignee protection.</li>
-            <li>Separated API, service, mapping, persistence, and rule-evaluation responsibilities.</li>
+            <li>Optimized Kanban ordering by replacing full-column reordering with fixed-length order keys, reducing routine card moves to a single rank assignment.</li>
+            <li>Implemented idempotent card moves, board access controls, and audit trails; synchronized opportunity columns with pipeline stages and validated allowed transitions before changing business state.</li>
           </ul>
           <p class="tech-line">Spring Boot · PostgreSQL · Flyway · Redis · RabbitMQ · OpenAPI</p>
         </article>
@@ -283,16 +280,23 @@
         <article class="work-card">
           <p class="work-meta">BRAC IT Services · Ticketing platform</p>
           <h3>Support operations, routing, and SLA visibility</h3>
-          <p>
-            Developed backend flows for intake, triage, comments, forwarding, team operations,
-            notifications, metadata, and service-performance tracking.
-          </p>
+          <p>Developed ticket lifecycle services covering creation, search, comments, forwarding, assignment, and notifications using Spring Boot, PostgreSQL, Redis, and RabbitMQ.</p>
           <ul>
-            <li>Least-loaded team routing, absence-reliever behavior, and workload updates.</li>
-            <li>SLA/KPI tracking alongside activity logs, flags, comments, and configurable fields.</li>
-            <li>Focused services for assignment, forwarding, feedback, workload, and metadata.</li>
+            <li>Automated least-loaded ticket assignment using Redis-backed workload counters and a min-heap, incorporating resolver availability and reliever fallback to reduce manual routing.</li>
+            <li>Implemented SLA and KPI tracking with assignee-restricted stage updates, progress notifications, and activity histories; maintained workload counters through asynchronous updates following ticket creation, reassignment, and resolution.</li>
           </ul>
-          <p class="tech-line">Spring Boot · PostgreSQL · Redis · RabbitMQ · Quartz · JPA/Hibernate</p>
+          <p class="tech-line">Spring Boot · PostgreSQL · Redis · RabbitMQ · JPA/Hibernate</p>
+        </article>
+
+        <article class="work-card work-card-wide">
+          <p class="work-meta">BRAC IT Services · Lending services</p>
+          <h3>Loan proposals with explicit business rules</h3>
+          <p>Developed command workflows for loan proposal creation, updates, bulk processing, approval, and soft deletion in a DDD/CQRS microservice using Spring Boot, MongoDB, and RabbitMQ.</p>
+          <ul>
+            <li>Encapsulated eligibility, loan limits, installment, insurance, and disbursement rules in a loan-proposal aggregate and composable business specifications; added aggregate-level tests for proposal updates.</li>
+            <li>Implemented atomic monthly proposal-number generation, batch duplicate checks, and lifecycle domain events to support proposal identification, validation, and downstream integration.</li>
+          </ul>
+          <p class="tech-line">Spring Boot · MongoDB · RabbitMQ · DDD · CQRS</p>
         </article>
       </div>
     </section>
@@ -311,12 +315,27 @@
         </div>
 
         <div class="project-grid">
+          <article class="project-card project-card-wide">
+            <p class="project-label">Identity and access management · Independent lab</p>
+            <h3>Enterprise IAM Lab</h3>
+            <p>
+              Two OIDC clients demonstrate Authorization Code + PKCE, shared SSO sessions,
+              LDAP user federation, and role/group mapping. A Spring Boot resource server validates
+              JWT issuer and audience, maps Keycloak roles to Spring authorities, and enforces
+              method-level access for employees, support agents, and administrators.
+            </p>
+            <div class="tag-row">
+              <span>Keycloak</span><span>Spring Security</span><span>OAuth 2.0 / OIDC</span><span>PKCE</span><span>OpenLDAP</span>
+            </div>
+            <a href="https://github.com/tawsif113/enterprise-iam-lab" target="_blank" rel="noreferrer">View repository ↗</a>
+          </article>
+
           <article class="project-card">
-            <p class="project-label">Distributed transactions</p>
+            <p class="project-label">Distributed transactions · Proof of concept</p>
             <h3>Spring Saga Orchestrator</h3>
             <p>
               Event-driven order coordination across order, inventory, and payment services with
-              autonomous data ownership, idempotent consumers, explicit failure events, and compensation.
+              separate data ownership, event-ID tracking, explicit failure events, and compensation paths.
             </p>
             <div class="tag-row">
               <span>Java 25</span><span>Spring Boot 4</span><span>RabbitMQ</span><span>MongoDB</span>
@@ -381,11 +400,19 @@
         </div>
         <div>
           <h3>Data & messaging</h3>
-          <p>PostgreSQL · MongoDB · Redis · RabbitMQ · Kafka · Flyway · indexing · query design</p>
+          <p>PostgreSQL · MongoDB · Redis · RabbitMQ · Flyway · indexing · query design</p>
         </div>
         <div>
-          <h3>Quality & operations</h3>
-          <p>JUnit 5 · Mockito · Testcontainers · Docker · GitHub Actions · Actuator · Prometheus · Grafana · Linux</p>
+          <h3>Testing & delivery</h3>
+          <p>JUnit 5 · Mockito · Testcontainers · GitHub Actions · Gradle · Docker · Docker Compose · Git · Linux</p>
+        </div>
+        <div>
+          <h3>Identity & security</h3>
+          <p>Keycloak · OAuth 2.0 · OpenID Connect · PKCE · JWT · role-based access control</p>
+        </div>
+        <div>
+          <h3>Observability</h3>
+          <p>Spring Boot Actuator · Micrometer · Prometheus · Grafana · structured logging</p>
         </div>
       </div>
     </section>
@@ -405,7 +432,7 @@
           <div>
             <h3>Software Engineer</h3>
             <p>BRAC IT Services Ltd. · Dhaka, Bangladesh</p>
-            <p class="muted">Backend engineering for CRM, ticketing, workflow, and messaging-heavy systems.</p>
+            <p class="muted">Backend engineering for CRM, ticketing, and DDD/CQRS loan proposal services.</p>
           </div>
         </article>
         <article>
@@ -440,6 +467,7 @@
           </p>
           <div class="contact-actions">
             <a class="button button-light" href="mailto:tawsifcse113@gmail.com">tawsifcse113@gmail.com</a>
+            <a class="case-text-link" href="assets/Tawsif_Rahman_Java_Backend_Resume.pdf" download="Tawsif_Rahman_Java_Backend_Resume.pdf">Download résumé (PDF)</a>
             <a class="case-text-link" href="https://linkedin.com/in/tawsifrahman113" target="_blank" rel="noreferrer">LinkedIn ↗</a>
           </div>
         </div>
@@ -453,9 +481,11 @@
       <div>
         <a href="https://github.com/tawsif113" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://research.tawsifrahman.flaro-tech.com" target="_blank" rel="noreferrer">Academic portfolio</a>
+        <a href="assets/Tawsif_Rahman_Java_Backend_Resume.pdf" download="Tawsif_Rahman_Java_Backend_Resume.pdf">Résumé (PDF)</a>
         <a href="#top">Back to top ↑</a>
       </div>
     </div>
   </footer>
 </body>
 </html>
+

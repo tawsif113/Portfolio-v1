@@ -1,3 +1,4 @@
 *.pdf
+!assets/Tawsif_Rahman_Java_Backend_Resume.pdf
 .hallmark/
 .DS_Store

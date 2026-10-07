@@ -15,6 +15,14 @@ The portfolio is structured around engineering evidence rather than a generic pr
 
 Each incident links to its root-cause analysis, design trade-offs, implementation, regression tests, and reproducible evidence.
 
+## Professional résumé and experience
+
+The hero, contact section, and footer link to the current two-page [Java backend résumé](assets/Tawsif_Rahman_Java_Backend_Resume.pdf), updated October 7, 2026. The PDF is served directly with the site; no external file-sharing service is required.
+
+The professional experience section matches the approved résumé wording for CRM, ticketing, and the loan proposal command service. Enterprise IAM Lab is included alongside the existing independent systems work. Rescue Lab metrics are explicitly identified as controlled lab results.
+
+To update the résumé, replace `assets/Tawsif_Rahman_Java_Backend_Resume.pdf` and review the three download links and professional experience copy together.
+
 ## Design
 
 The visual system uses a restrained professional palette:
@@ -36,3 +44,4 @@ The site is responsive, accessible, and intentionally framework-free.
 ## Run locally
 
 Open `index.html` directly in a browser, or serve the directory with any static file server.
+

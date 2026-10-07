@@ -645,6 +645,11 @@ h2 {
   gap: var(--space-lg);
 }
 
+.work-card-wide,
+.project-card-wide {
+  grid-column: 1 / -1;
+}
+
 .work-card,
 .project-card {
   padding: var(--space-lg);
@@ -1005,3 +1010,4 @@ h2 {
     transform: none;
   }
 }
+
