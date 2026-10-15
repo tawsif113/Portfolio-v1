@@ -17,9 +17,9 @@ Each incident links to its root-cause analysis, design trade-offs, implementatio
 
 ## Professional résumé and experience
 
-The hero, contact section, and footer link to the current two-page [Java backend résumé](assets/Tawsif_Rahman_Java_Backend_Resume.pdf), updated October 7, 2026. The PDF is served directly with the site; no external file-sharing service is required.
+The hero, contact section, and footer link to the committed two-page [Java backend résumé](assets/Tawsif_Rahman_Java_Backend_Resume.pdf). The PDF is served directly with the site; no external file-sharing service is required. The exact PDF must be replaced whenever a newer approved résumé is provided; this text-only update does not replace the binary asset.
 
-The professional experience section matches the approved résumé wording for CRM, ticketing, and the loan proposal command service. Enterprise IAM Lab is included alongside the existing independent systems work. Rescue Lab metrics are explicitly identified as controlled lab results.
+The professional experience section reflects the approved résumé's CRM, ticketing, and loan-proposal work. A compact three-domain summary now precedes the extensive Rescue Lab case study, and the loan-proposal section explicitly identifies 21 composable business specifications. Enterprise IAM Lab is included alongside the existing independent systems work. Rescue Lab metrics are explicitly identified as controlled lab results. Achievement and publication DOI links match the supplied CVs. The Java 25 / Spring Boot 4 version label explicitly describes the independent lab stack rather than every production service.
 
 To update the résumé, replace `assets/Tawsif_Rahman_Java_Backend_Resume.pdf` and review the three download links and professional experience copy together.
 
