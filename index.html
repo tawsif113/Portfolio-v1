@@ -32,8 +32,8 @@
       </a>
 
       <nav aria-label="Primary navigation">
-        <a href="#case-study">Case study</a>
         <a href="#experience">Experience</a>
+        <a href="#case-study">Case study</a>
         <a href="#projects">Projects</a>
         <a href="#capabilities">Skills</a>
         <a href="#background">Background</a>
@@ -74,7 +74,7 @@
         </p>
         <dl class="quick-facts">
           <div>
-            <dt>Primary stack</dt>
+            <dt>Independent lab stack</dt>
             <dd>Java 25 · Spring Boot 4</dd>
           </div>
           <div>
@@ -91,6 +91,39 @@
           </div>
         </dl>
       </aside>
+    </section>
+
+    <section class="section section-soft" aria-label="Professional experience at a glance">
+      <div class="shell">
+        <div class="section-heading section-heading-row">
+          <div>
+            <p class="section-kicker">Professional experience at a glance</p>
+            <h2>Three production domains. One focus on correctness.</h2>
+          </div>
+          <p>
+            Building backend services at BRAC IT Services Ltd. since December 2024,
+            across CRM, ticketing, and loan-proposal workflows.
+            <a class="inline-link" href="#experience">See complete experience ↗</a>
+          </p>
+        </div>
+        <div class="principles">
+          <article>
+            <span>01 · CRM</span>
+            <h3>Rule-driven sales operations</h3>
+            <p>Lead-to-quote workflows, configurable assignment rules, idempotent Kanban moves, and traceable stage transitions.</p>
+          </article>
+          <article>
+            <span>02 · Ticketing</span>
+            <h3>Least-loaded resolver routing</h3>
+            <p>Redis-backed workload counters, min-heap assignment, notifications, and SLA/KPI tracking.</p>
+          </article>
+          <article>
+            <span>03 · Lending</span>
+            <h3>DDD/CQRS loan proposals</h3>
+            <p>Command-side microservice with 21 composable business specifications, bulk workflows, and lifecycle domain events.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="case-section" id="case-study">
@@ -293,7 +326,7 @@
           <h3>Loan proposals with explicit business rules</h3>
           <p>Developed command workflows for loan proposal creation, updates, bulk processing, approval, and soft deletion in a DDD/CQRS microservice using Spring Boot, MongoDB, and RabbitMQ.</p>
           <ul>
-            <li>Encapsulated eligibility, loan limits, installment, insurance, and disbursement rules in a loan-proposal aggregate and composable business specifications; added aggregate-level tests for proposal updates.</li>
+            <li>Encapsulated 21 composable business specifications covering eligibility, loan limits, installments, insurance, nominees, and disbursement within a loan-proposal aggregate; added aggregate-level tests for proposal updates.</li>
             <li>Implemented atomic monthly proposal-number generation, batch duplicate checks, and lifecycle domain events to support proposal identification, validation, and downstream integration.</li>
           </ul>
           <p class="tech-line">Spring Boot · MongoDB · RabbitMQ · DDD · CQRS</p>
@@ -444,10 +477,22 @@
           </div>
         </article>
         <article>
+          <p class="timeline-date">2023–2024</p>
+          <div>
+            <h3>Competitive programming achievements</h3>
+            <p>Codeforces Specialist (1500+ rating); CUET IUPC finalist in 2023 and 2024; CUET Tech Carnival 2020 finalist.</p>
+          </div>
+        </article>
+        <article>
           <p class="timeline-date">2024</p>
           <div>
             <h3>Peer-reviewed publications</h3>
             <p>Machine-learning fraud detection and an IEEE-published insurance-awareness application.</p>
+            <p>
+              <a class="inline-link" href="https://doi.org/10.5815/ijmsc.2024.03.02" target="_blank" rel="noreferrer">Journal DOI ↗</a>
+              &nbsp; · &nbsp;
+              <a class="inline-link" href="https://doi.org/10.1109/CSITSS64042.2024.10817002" target="_blank" rel="noreferrer">IEEE conference DOI ↗</a>
+            </p>
             <a class="inline-link" href="https://research.tawsifrahman.flaro-tech.com" target="_blank" rel="noreferrer">Academic portfolio ↗</a>
           </div>
         </article>
